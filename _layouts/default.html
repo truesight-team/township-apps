@@ -2,6 +2,9 @@
 <html lang="en-us">
 
 {% include head.html %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    integrity="sha512-F7WyTLiiiPqvu2pGumDR15med0MDkUIo5VTVyyfECR5DZmCnDhti9q5VID02ItWjq6fvDfMaBaDl2J3WdL1uxA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
     <div class="imageWrapper">
@@ -55,16 +58,49 @@
                             {{ site.app_description }}
                         </p>
                     </div>
-                    <div class="downloadButtonsContainer">
-                        {% if site.playstore_link %}
-                        <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore"
-                                src="assets/playstore.png"></a>
-                        {% endif %}
-                        <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore"
-                                src="assets/appstore.png"></a>
+                </div>
+
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex flex-column w-">
+                        <h3 class="my-4">
+                            App cư dân
+                        </h3>
+                        <div class="d-flex flex-row justify-content-between">
+                            <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore"
+                                    src="assets/playstore.png"></a>
+                            <a class="appStoreLink"
+                                href="itms-services:///?action=download-manifest&url=https://township-apps.truesight.asia/downloads/township.plist"><img
+                                    class="appStore" src="assets/appstore.png"></a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <h3 class="my-4">
+                            App quản lý
+                        </h3>
+                        <div class="d-flex flex-row justify-content-between">
+                            <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore"
+                                    src="assets/playstore.png"></a>
+                            <a class="appStoreLink"
+                                href="itms-services:///?action=download-manifest&url=https://township-apps.truesight.asia/downloads/township-management.plist"><img
+                                    class="appStore" src="assets/appstore.png"></a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <h3 class="my-4">
+                            App bán hàng
+                        </h3>
+                        <div class="d-flex flex-row justify-content-between">
+                            <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore"
+                                    src="assets/playstore.png"></a>
+                            <a class="appStoreLink"
+                                href="itms-services:///?action=download-manifest&url=https://township-apps.truesight.asia/downloads/township-esales.plist"><img
+                                    class="appStore" src="assets/appstore.png"></a>
+                        </div>
                     </div>
                 </div>
-                {% include features.html %}
+
                 {% include footer.html %}
                 {% include appstoreimages.html %}
             </div>
